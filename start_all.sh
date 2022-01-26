@@ -55,11 +55,11 @@ case $input in
 			;;
 		no)
                         open -a Terminal.app $HOME/ssi/START/pull_repos.sh
-                        sleep 10
+                        sleep 10 
                         open -a Terminal.app $HOME/ssi/START/check_images.sh
                         sleep 10
                         open -a Terminal.app $HOME/ssi/START/start_basic.sh
-                        sleep 20
+                        sleep 20 
                         open -a Terminal.app $HOME/ssi/START/start_faber.sh
                         sleep 5
                         open -a Terminal.app $HOME/ssi/START/start_acme.sh
