@@ -1,30 +1,34 @@
 #!/bin/bash
 
-#!/bin/bash
+yellow=`tput setaf 3`
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
 
-echo "Checking ACAPY ..."
+
+echo "${yellow}Checking ACAPY ...${reset}"
 if cd $HOME/ssi/aries-cloudagent-python
 then
-       echo "Already exists ..."
+       echo "${green}Already exists ...${reset}"
 else
-       echo "Cloning ACAPY now ..."
+       echo "${green}Cloning ACAPY now ...${reset}"
        git clone https://github.com/hyperledger/aries-cloudagent-python $HOME/ssi/aries-cloudagent-python
 fi
 
-echo "Checking TAILS server ..."
+echo "${yellow}Checking TAILS server ...${reset}"
 if cd $HOME/ssi/indy-tails-server
 then
-       echo "Already exists ..."
+       echo "${green}Already exists ...${reset}"
 else
-       echo "Cloning TAILS server now ..."
+       echo "${green}Cloning TAILS server now ...${reset}"
        git clone https://github.com/bcgov/indy-tails-server.git $HOME/ssi/indy-tails-server
 fi
 
-echo "Checking von-network ..."
+echo "${yellow}Checking von-network ...${reset}"
 if cd $HOME/ssi/von-network
 then
-       echo "Already exists ..."
+       echo "${green}Already exists ...${reset}"
 else
-       echo "Cloning von-network now ..."
+       echo "${green}Cloning von-network now ...${reset}"
        git clone https://github.com/bcgov/von-network.git $HOME/ssi/von-network
 fi

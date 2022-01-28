@@ -35,11 +35,14 @@ case $input in
 		read -p "Do you want to open created URLs automatically in the browser? [yes|no]" input2
 		case $input2 in
 		yes)
-			open -a Terminal.app $HOME/ssi/START/pull_repos.sh
+			echo "Pulling git repos ..."
+			$HOME/ssi/START/pull_repos.sh 
 			sleep 10
-			open -a Terminal.app $HOME/ssi/START/check_images.sh
+			echo "Building docker images ..."
+			$HOME/ssi/START/check_images.sh 
 			sleep 10
-			open -a Terminal.app $HOME/ssi/START/start_basic.sh
+			echo "Starting basic containers ..." 
+			$HOME/ssi/START/start_basic.sh 
 			sleep 20
 			open -a Terminal.app $HOME/ssi/START/start_faber.sh
 			sleep 5
@@ -54,11 +57,14 @@ case $input in
 			open -n -a "Google Chrome" http://localhost:8041
 			;;
 		no)
-                        open -a Terminal.app $HOME/ssi/START/pull_repos.sh
-                        sleep 10 
-                        open -a Terminal.app $HOME/ssi/START/check_images.sh
+                        echo "Pulling git repos ..."
+                        $HOME/ssi/START/pull_repos.sh 
                         sleep 10
-                        open -a Terminal.app $HOME/ssi/START/start_basic.sh
+                        echo "Building docker images ..."
+                        $HOME/ssi/START/check_images.sh 
+                        sleep 10
+                        echo "Starting basic containers ..."
+                        $HOME/ssi/START/start_basic.sh 
                         sleep 20 
                         open -a Terminal.app $HOME/ssi/START/start_faber.sh
                         sleep 5
@@ -91,22 +97,27 @@ case $input in
                 echo ""
                 read -p "Do you want to open created URLs automatically in the browser? [yes|no]" input2
                 case $input2 in
-                yes)            
-	                open -a Terminal.app $HOME/ssi/START/pull_repos.sh
+                yes)    
+                        echo "Pulling git repos ..."
+                        $HOME/ssi/START/pull_repos.sh 
                         sleep 10
-			open -a Terminal.app $HOME/ssi/START/check_images.sh
-			sleep 10
-			open -a Terminal.app $HOME/ssi/START/start_basic.sh
-                        sleep 20
+                        echo "Building docker images ..."
+                        $HOME/ssi/START/check_images.sh 
+                        sleep 10
+                        echo "Starting basic containers ..."
+                        $HOME/ssi/START/start_basic.sh         
 			open -n -a "Google Chrome" http://localhost:8080/browser/
 			open -n -a "Google Chrome" http://localhost:9000
 			;;
 		no)
-                        open -a Terminal.app $HOME/ssi/START/pull_repos.sh
+                        echo "Pulling git repos ..."
+                        $HOME/ssi/START/pull_repos.sh 
                         sleep 10
-                        open -a Terminal.app $HOME/ssi/START/check_images.sh
+                        echo "Building docker images ..."
+                        $HOME/ssi/START/check_images.sh 
                         sleep 10
-                        open -a Terminal.app $HOME/ssi/START/start_basic.sh
+                        echo "Starting basic containers ..."
+                        $HOME/ssi/START/start_basic.sh 
 			;;
 		esac
 		;;
