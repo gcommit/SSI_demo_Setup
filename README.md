@@ -24,7 +24,7 @@ Project is created with:
 $ mkdir -p $HOME/ssi
 $ cd $HOME/ssi
 $ git clone
-$ mv demoSTART START
+$ mv SSI_demo_Setup START
 ```
 
 ## Demo
