@@ -6,6 +6,8 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Demo](#demo)
+* [Reset](#reset)
+
 
 ## General info
 This project will start you a full demo setup of the SSI project, with acapy agents, network ledger, postgres etc. 
@@ -28,8 +30,15 @@ $ mv demoSTART START
 ## Demo
 Simply run the start_all.sh script, answer the questions and enjoy!
 ```
-$ mkdir -p $HOME/ssi
+$ cd $HOME/ssi
 $ ./START/start_all.sh
 ```
 
 Read here more about how to use the demo agents: https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/README.md
+
+## Reset
+To reset the started setup just run the reset and follow the questions
+```
+$ cd $HOME/ssi
+$ ./START/reset_blockchain.sh
+```
